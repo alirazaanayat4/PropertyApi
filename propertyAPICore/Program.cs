@@ -53,21 +53,11 @@ namespace propertyAPICore
 
             app.UseHttpsRedirection();
 
-            //app.UseAuthorization();
-
             app.UseCors(x => x
                .AllowAnyOrigin()
                .AllowAnyMethod()
                .AllowAnyHeader());
 
-            // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=316888
-            //OAuthAuthorizationServerOptions option = new OAuthAuthorizationServerOptions
-            //{
-            //    TokenEndpointPath = new Microsoft.Owin.PathString("/token"),
-            //    Provider = new appOauthProvider(),
-            //    AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(60),
-            //    AllowInsecureHttp = true
-            //};
             app.UseAuthentication();
             app.UseAuthorization();
 
